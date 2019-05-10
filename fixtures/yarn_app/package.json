@@ -7,12 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "",
+  "license": "MIT",
   "dependencies": {
     "leftpad": "~0.0.1"
   },
   "repository": {
     "type": "git",
     "url": ""
+  },
+  "engines": {
+    "node": "~10",
+    "yarn": "~1"
   }
 }
