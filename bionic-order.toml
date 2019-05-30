@@ -1,3 +1,5 @@
+description = "Bionic base image with the Java and Node.js buildpacks"
+
 [[groups]]
   labels = [ "java" ]
   buildpacks = [
