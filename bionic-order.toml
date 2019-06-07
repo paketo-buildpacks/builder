@@ -16,15 +16,15 @@ description = "Bionic base image with the Java and Node.js buildpacks"
   ]
 
 [[groups]]
-  labels = ["nodejs", "yarn"]
+  labels = ["node-engine", "yarn"]
   buildpacks = [
-    {id = "org.cloudfoundry.nodejs",         version = "latest" },
-    {id = "org.cloudfoundry.yarn",           version = "latest" }
+    {id = "org.cloudfoundry.node-engine",              version = "latest" },
+    {id = "org.cloudfoundry.yarn",                     version = "latest" }
   ]
 
 [[groups]]
-  labels = ["nodejs", "npm"]
+  labels = ["node-engine", "npm"]
   buildpacks = [
-    {id = "org.cloudfoundry.nodejs",         version = "latest" },
-    {id = "org.cloudfoundry.npm",            version = "latest" }
+    {id = "org.cloudfoundry.node-engine",              version = "latest" },
+    {id = "org.cloudfoundry.npm",                      version = "latest" }
   ]
