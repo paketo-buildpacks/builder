@@ -3,42 +3,52 @@ description = "Cflinuxfs3 base image with the Java, Node.js, Python, and .NET Co
 [[groups]]
   labels = [ "java" ]
   buildpacks = [
-    { id = "org.cloudfoundry.openjdk",                  version = "latest" },
-    { id = "org.cloudfoundry.buildsystem",              version = "latest", optional = true },
-    { id = "org.cloudfoundry.jvmapplication",           version = "latest" },
 
-    { id = "org.cloudfoundry.azureapplicationinsights", version = "latest", optional = true },
-    { id = "org.cloudfoundry.debug",                    version = "latest", optional = true },
-    { id = "org.cloudfoundry.googlestackdriver",        version = "latest", optional = true },
-    { id = "org.cloudfoundry.jmx",                      version = "latest", optional = true },
+### Order is strictly enforced
+    { id = "org.cloudfoundry.archiveexpanding",          version = "latest", optional = true },
+    { id = "org.cloudfoundry.openjdk",                   version = "latest" },
+    { id = "org.cloudfoundry.buildsystem",               version = "latest", optional = true },
+    { id = "org.cloudfoundry.jvmapplication",            version = "latest" },
 
-    { id = "org.cloudfoundry.procfile",                 version = "latest", optional = true },
+### Order determines precedence
+    { id = "org.cloudfoundry.springboot",                version = "latest", optional = true },
+    { id = "org.cloudfoundry.tomcat",                    version = "latest", optional = true },
+    { id = "org.cloudfoundry.distzip",                   version = "latest", optional = true },
+    { id = "org.cloudfoundry.procfile",                  version = "latest", optional = true },
+
+### Order does not matter
+    { id = "org.cloudfoundry.azureapplicationinsights",  version = "latest", optional = true },
+    { id = "org.cloudfoundry.debug",                     version = "latest", optional = true },
+    { id = "org.cloudfoundry.googlestackdriver",         version = "latest", optional = true },
+    { id = "org.cloudfoundry.jdbc",                      version = "latest", optional = true },
+    { id = "org.cloudfoundry.jmx",                       version = "latest", optional = true },
+    { id = "org.cloudfoundry.springautoreconfiguration", version = "latest", optional = true },
   ]
 
 [[groups]]
   labels = ["node-engine", "yarn"]
   buildpacks = [
-    { id = "org.cloudfoundry.node-engine",              version = "latest" },
-    { id = "org.cloudfoundry.yarn",                     version = "latest" }
+    { id = "org.cloudfoundry.node-engine", version = "latest" },
+    { id = "org.cloudfoundry.yarn",        version = "latest" }
   ]
 
 [[groups]]
   labels = ["node-engine", "npm"]
   buildpacks = [
-    { id = "org.cloudfoundry.node-engine",              version = "latest" },
-    { id = "org.cloudfoundry.npm",                      version = "latest" }
+    { id = "org.cloudfoundry.node-engine", version = "latest" },
+    { id = "org.cloudfoundry.npm",         version = "latest" }
   ]
 
 [[groups]]
   labels = [ "python" ]
   buildpacks = [
-    { id = "org.cloudfoundry.python",                   version = "latest" },
-    { id = "org.cloudfoundry.pipenv",                   version = "latest", optional = true },
-    { id = "org.cloudfoundry.pip",                      version = "latest" }
+    { id = "org.cloudfoundry.python", version = "latest" },
+    { id = "org.cloudfoundry.pipenv", version = "latest", optional = true },
+    { id = "org.cloudfoundry.pip",    version = "latest" }
   ]
 
 [[groups]]
   labels = ["dotnet"]
   buildpacks = [
-    { id = "org.cloudfoundry.dotnet-core-conf",         version = "latest" }
+    { id = "org.cloudfoundry.dotnet-core-conf", version = "latest" }
   ]
