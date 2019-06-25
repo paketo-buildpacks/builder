@@ -1,4 +1,4 @@
-description = "Bionic base image with the Java and Node.js buildpacks"
+description = "Bionic base image with the Java, Node.js, and .NET Core buildpacks"
 
 [[groups]]
   labels = [ "java" ]

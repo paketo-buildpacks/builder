@@ -1,4 +1,4 @@
-description = "Cflinuxfs3 base image with the Java, Node.js, and Python buildpacks"
+description = "Cflinuxfs3 base image with the Java, Node.js, Python, and .NET Core buildpacks"
 
 [[groups]]
   labels = [ "java" ]
