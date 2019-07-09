@@ -11,8 +11,8 @@ description = "Bionic base image with the Java, Node.js, and .NET Core buildpack
     { id = "org.cloudfoundry.jvmapplication",            version = "latest" },
 
 ### Order determines precedence
-    { id = "org.cloudfoundry.springboot",                version = "latest", optional = true },
     { id = "org.cloudfoundry.tomcat",                    version = "latest", optional = true },
+    { id = "org.cloudfoundry.springboot",                version = "latest", optional = true },
     { id = "org.cloudfoundry.distzip",                   version = "latest", optional = true },
     { id = "org.cloudfoundry.procfile",                  version = "latest", optional = true },
 
