@@ -44,3 +44,17 @@ description = "Bionic base image with the Java, Node.js, and .NET Core buildpack
   buildpacks = [
     { id = "org.cloudfoundry.dotnet-core-conf", version = "latest" }
   ]
+  
+[[groups]]
+  labels = ["go", "go-mod"]
+  buildpacks = [
+    { id = "org.cloudfoundry.go-compiler", version = "latest" },
+    { id = "org.cloudfoundry.go-mod",      version = "latest" }
+  ]
+  
+[[groups]]
+  labels = ["go", "dep"]
+  buildpacks = [
+    { id = "org.cloudfoundry.go-compiler", version = "latest" },
+    { id = "org.cloudfoundry.dep",         version = "latest" }
+  ]
