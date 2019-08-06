@@ -1,4 +1,4 @@
-description = "Cflinuxfs3 base image with the Java, Node.js, Python, and .NET Core buildpacks"
+description = "Cflinuxfs3 base image with the Java, Node.js, Go, Python, and .NET Core buildpacks"
 
 [[groups]]
   labels = [ "java" ]
@@ -52,14 +52,14 @@ description = "Cflinuxfs3 base image with the Java, Node.js, Python, and .NET Co
   buildpacks = [
     { id = "org.cloudfoundry.dotnet-core-conf", version = "latest" }
   ]
-  
+
 [[groups]]
   labels = ["go", "go-mod"]
   buildpacks = [
     { id = "org.cloudfoundry.go-compiler", version = "latest" },
     { id = "org.cloudfoundry.go-mod",      version = "latest" }
   ]
-  
+
 [[groups]]
   labels = ["go", "dep"]
   buildpacks = [
