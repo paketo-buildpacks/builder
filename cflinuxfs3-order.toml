@@ -1,4 +1,4 @@
-description = "Cflinuxfs3 base image with the Java, Node.js, Go, Python, and .NET Core buildpacks"
+description = "Cflinuxfs3 base image with the Java, Node.js, Python, Go, .NET Core, and PHP buildpacks"
 
 [[groups]]
   labels = [ "java" ]
@@ -65,4 +65,14 @@ description = "Cflinuxfs3 base image with the Java, Node.js, Go, Python, and .NE
   buildpacks = [
     { id = "org.cloudfoundry.go-compiler", version = "latest" },
     { id = "org.cloudfoundry.dep",         version = "latest" }
+  ]
+
+[[groups]]
+  labels = ["php", "composer", "httpd", "nginx", "php-web"]
+  buildpacks = [
+    { id = "org.cloudfoundry.php-dist",                 version = "latest" },
+    { id = "org.cloudfoundry.php-composer",             version = "latest", optional = true },
+    { id = "org.cloudfoundry.httpd",                    version = "latest", optional = true },
+    { id = "org.cloudfoundry.nginx",                    version = "latest", optional = true },
+    { id = "org.cloudfoundry.php-web",                  version = "latest" }
   ]
