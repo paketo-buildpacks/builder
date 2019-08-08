@@ -74,21 +74,31 @@ description = "Cflinuxfs3 base image; run `pack inspect-builder <builder>` to se
   ]
 
 [[groups]]
-  labels = ["php", "composer", "php-web"]
+  labels = ["php", "composer", "httpd", "php-web"]
   buildpacks = [
-    { id = "org.cloudfoundry.php-dist",                 version = "latest" },
-    { id = "org.cloudfoundry.php-composer",             version = "latest", optional = true },
-    { id = "org.cloudfoundry.php-web",                  version = "latest" }
+    { id = "org.cloudfoundry.php-dist", version = "latest" },
+    { id = "org.cloudfoundry.php-composer", version = "latest", optional = true },
+    { id = "org.cloudfoundry.httpd", version = "latest", optional = true}
+    { id = "org.cloudfoundry.php-web", version = "latest" }
   ]
 
 [[groups]]
-  labels = ["php", "httpd"]
+  labels = ["php", "composer", "nginx", "php-web"]
   buildpacks = [
-    { id = "org.cloudfoundry.httpd",                    version = "latest", optional = true },
+    { id = "org.cloudfoundry.php-dist", version = "latest" },
+    { id = "org.cloudfoundry.php-composer", version = "latest", optional = true },
+    { id = "org.cloudfoundry.nginx", version = "latest", optional = true},
+    { id = "org.cloudfoundry.php-web", version = "latest" }
   ]
 
 [[groups]]
-  labels = ["php", "nginx"]
+  labels = ["httpd"]
   buildpacks = [
-    { id = "org.cloudfoundry.nginx",                    version = "latest", optional = true },
+    { id = "org.cloudfoundry.httpd", version = "latest"}
+  ]
+
+[[groups]]
+  labels = ["nginx"]
+  buildpacks = [
+    { id = "org.cloudfoundry.nginx", version = "latest"}
   ]
