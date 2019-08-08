@@ -78,7 +78,7 @@ description = "Cflinuxfs3 base image; run `pack inspect-builder <builder>` to se
   buildpacks = [
     { id = "org.cloudfoundry.php-dist", version = "latest" },
     { id = "org.cloudfoundry.php-composer", version = "latest", optional = true },
-    { id = "org.cloudfoundry.httpd", version = "latest", optional = true}
+    { id = "org.cloudfoundry.httpd", version = "latest", optional = true },
     { id = "org.cloudfoundry.php-web", version = "latest" }
   ]
 
