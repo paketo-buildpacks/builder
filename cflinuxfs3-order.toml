@@ -1,4 +1,4 @@
-description = "Cflinuxfs3 base image with the Java, Node.js, Python, Go, .NET Core, and PHP buildpacks"
+description = "Cflinuxfs3 base image; run `pack inspect-builder <builder>` to see the supported buildpacks"
 
 [[groups]]
   labels = [ "java" ]
@@ -45,6 +45,12 @@ description = "Cflinuxfs3 base image with the Java, Node.js, Python, Go, .NET Co
     { id = "org.cloudfoundry.python", version = "latest" },
     { id = "org.cloudfoundry.pipenv", version = "latest", optional = true },
     { id = "org.cloudfoundry.pip",    version = "latest" }
+  ]
+
+[[groups]]
+  labels = [ "python" ]
+  buildpacks = [
+    { id = "org.cloudfoundry.conda", version = "latest" },
   ]
 
 [[groups]]

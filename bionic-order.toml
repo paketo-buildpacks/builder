@@ -1,4 +1,5 @@
-description = "Bionic base image with the Java, Go, Node.js, and .NET Core buildpacks"
+description = "Bionic base image; run `pack inspect-builder <builder>` to see the supported buildpacks"
+
 
 [[groups]]
   labels = [ "java" ]
