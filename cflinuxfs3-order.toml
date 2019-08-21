@@ -1,4 +1,4 @@
-description = "Cflinuxfs3 base image; run `pack inspect-builder <builder>` to see the supported buildpacks"
+description = "Cflinuxfs3 base image with buildpacks for Java, NodeJS, Python, Golang, PHP, HTTPD and NGINX"
 
 [[groups]]
   labels = [ "java" ]

@@ -1,4 +1,4 @@
-description = "Bionic base image; run `pack inspect-builder <builder>` to see the supported buildpacks"
+description = "Bionic base image with buildpacks for Java, NodeJS and Golang"
 
 
 [[groups]]
