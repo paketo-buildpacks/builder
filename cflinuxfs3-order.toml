@@ -44,7 +44,7 @@ description = "Cflinuxfs3 base image with buildpacks for Java, NodeJS, Python, G
   buildpacks = [
     { id = "org.cloudfoundry.python", version = "latest" },
     { id = "org.cloudfoundry.pipenv", version = "latest", optional = true },
-    { id = "org.cloudfoundry.pip",    version = "latest", optional = true }
+    { id = "org.cloudfoundry.pip",    version = "latest" }
   ]
 
 [[groups]]
