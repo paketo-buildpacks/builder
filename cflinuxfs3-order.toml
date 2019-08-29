@@ -1,104 +1,93 @@
-description = "Cflinuxfs3 base image with buildpacks for Java, NodeJS, Python, Golang, PHP, HTTPD and NGINX"
+schema = "2"
+description = "cflinuxfs3 base image with buildpacks for Java, NodeJS, Python, Golang, PHP, HTTPD and NGINX"
 
-[[groups]]
-  labels = [ "java" ]
-  buildpacks = [
+[[order]]
+group = [
 
 ### Order is strictly enforced
-    { id = "org.cloudfoundry.archiveexpanding",          version = "latest", optional = true },
-    { id = "org.cloudfoundry.openjdk",                   version = "latest" },
-    { id = "org.cloudfoundry.buildsystem",               version = "latest", optional = true },
-    { id = "org.cloudfoundry.jvmapplication",            version = "latest" },
+  { id = "org.cloudfoundry.archiveexpanding",          optional = true },
+  { id = "org.cloudfoundry.openjdk" },
+  { id = "org.cloudfoundry.buildsystem",               optional = true },
+  { id = "org.cloudfoundry.jvmapplication" },
 
 ### Order determines precedence
-    { id = "org.cloudfoundry.springboot",                version = "latest", optional = true },
-    { id = "org.cloudfoundry.tomcat",                    version = "latest", optional = true },
-    { id = "org.cloudfoundry.distzip",                   version = "latest", optional = true },
-    { id = "org.cloudfoundry.procfile",                  version = "latest", optional = true },
+  { id = "org.cloudfoundry.tomcat",                    optional = true },
+  { id = "org.cloudfoundry.springboot",                optional = true },
+  { id = "org.cloudfoundry.distzip",                   optional = true },
+  { id = "org.cloudfoundry.procfile",                  optional = true },
 
 ### Order does not matter
-    { id = "org.cloudfoundry.azureapplicationinsights",  version = "latest", optional = true },
-    { id = "org.cloudfoundry.debug",                     version = "latest", optional = true },
-    { id = "org.cloudfoundry.googlestackdriver",         version = "latest", optional = true },
-    { id = "org.cloudfoundry.jdbc",                      version = "latest", optional = true },
-    { id = "org.cloudfoundry.jmx",                       version = "latest", optional = true },
-    { id = "org.cloudfoundry.springautoreconfiguration", version = "latest", optional = true },
-  ]
+  { id = "org.cloudfoundry.azureapplicationinsights",  optional = true },
+  { id = "org.cloudfoundry.debug",                     optional = true },
+  { id = "org.cloudfoundry.googlestackdriver",         optional = true },
+  { id = "org.cloudfoundry.jdbc",                      optional = true },
+  { id = "org.cloudfoundry.jmx",                       optional = true },
+  { id = "org.cloudfoundry.springautoreconfiguration", optional = true },
+]
 
-[[groups]]
-  labels = ["node-engine", "yarn"]
-  buildpacks = [
-    { id = "org.cloudfoundry.node-engine", version = "latest" },
-    { id = "org.cloudfoundry.yarn",        version = "latest" }
-  ]
+[[order]]
+group = [
+  { id = "org.cloudfoundry.node-engine" },
+  { id = "org.cloudfoundry.yarn" },
+]
 
-[[groups]]
-  labels = ["node-engine", "npm"]
-  buildpacks = [
-    { id = "org.cloudfoundry.node-engine", version = "latest" },
-    { id = "org.cloudfoundry.npm",         version = "latest" }
-  ]
+[[order]]
+group = [
+  { id = "org.cloudfoundry.node-engine" },
+  { id = "org.cloudfoundry.npm" },
+]
 
-[[groups]]
-  labels = [ "python" ]
-  buildpacks = [
-    { id = "org.cloudfoundry.python", version = "latest" },
-    { id = "org.cloudfoundry.pipenv", version = "latest", optional = true },
-    { id = "org.cloudfoundry.pip",    version = "latest" }
-  ]
+[[order]]
+group = [
+  { id = "org.cloudfoundry.python" },
+  { id = "org.cloudfoundry.pipenv", optional = true },
+  { id = "org.cloudfoundry.pip" },
+]
 
-[[groups]]
-  labels = [ "python" ]
-  buildpacks = [
-    { id = "org.cloudfoundry.conda", version = "latest" },
-  ]
+[[order]]
+group = [
+  { id = "org.cloudfoundry.conda" },
+]
 
-[[groups]]
-  labels = ["dotnet"]
-  buildpacks = [
-    { id = "org.cloudfoundry.dotnet-core-conf", version = "latest" }
-  ]
+[[order]]
+group = [
+  { id = "org.cloudfoundry.dotnet-core-conf" },
+]
 
-[[groups]]
-  labels = ["go", "go-mod"]
-  buildpacks = [
-    { id = "org.cloudfoundry.go-compiler", version = "latest" },
-    { id = "org.cloudfoundry.go-mod",      version = "latest" }
-  ]
+[[order]]
+group = [
+  { id = "org.cloudfoundry.go-compiler" },
+  { id = "org.cloudfoundry.go-mod" },
+]
 
-[[groups]]
-  labels = ["go", "dep"]
-  buildpacks = [
-    { id = "org.cloudfoundry.go-compiler", version = "latest" },
-    { id = "org.cloudfoundry.dep",         version = "latest" }
-  ]
+[[order]]
+group = [
+  { id = "org.cloudfoundry.go-compiler" },
+  { id = "org.cloudfoundry.dep" },
+]
 
-[[groups]]
-  labels = ["php", "composer", "httpd", "php-web"]
-  buildpacks = [
-    { id = "org.cloudfoundry.php-dist", version = "latest" },
-    { id = "org.cloudfoundry.php-composer", version = "latest", optional = true },
-    { id = "org.cloudfoundry.httpd", version = "latest", optional = true },
-    { id = "org.cloudfoundry.php-web", version = "latest" }
-  ]
+[[order]]
+group = [
+  { id = "org.cloudfoundry.php-dist" },
+  { id = "org.cloudfoundry.php-composer", optional = true },
+  { id = "org.cloudfoundry.httpd",        optional = true },
+  { id = "org.cloudfoundry.php-web" },
+]
 
-[[groups]]
-  labels = ["php", "composer", "nginx", "php-web"]
-  buildpacks = [
-    { id = "org.cloudfoundry.php-dist", version = "latest" },
-    { id = "org.cloudfoundry.php-composer", version = "latest", optional = true },
-    { id = "org.cloudfoundry.nginx", version = "latest", optional = true},
-    { id = "org.cloudfoundry.php-web", version = "latest" }
-  ]
+[[order]]
+group = [
+  { id = "org.cloudfoundry.php-dist" },
+  { id = "org.cloudfoundry.php-composer", optional = true },
+  { id = "org.cloudfoundry.nginx",        optional = true },
+  { id = "org.cloudfoundry.php-web" }
+]
 
-[[groups]]
-  labels = ["httpd"]
-  buildpacks = [
-    { id = "org.cloudfoundry.httpd", version = "latest"}
-  ]
+[[order]]
+group = [
+  { id = "org.cloudfoundry.httpd" },
+]
 
-[[groups]]
-  labels = ["nginx"]
-  buildpacks = [
-    { id = "org.cloudfoundry.nginx", version = "latest"}
-  ]
+[[order]]
+group = [
+  { id = "org.cloudfoundry.nginx" },
+]
