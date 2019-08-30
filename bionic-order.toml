@@ -1,4 +1,3 @@
-schema = "2"
 description = "Ubuntu bionic base image with buildpacks for Java, NodeJS and Golang"
 
 [[order]]

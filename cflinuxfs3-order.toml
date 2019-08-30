@@ -1,4 +1,3 @@
-schema = "2"
 description = "cflinuxfs3 base image with buildpacks for Java, NodeJS, Python, Golang, PHP, HTTPD and NGINX"
 
 [[order]]
