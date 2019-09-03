@@ -1,13 +1,13 @@
 description = "Tiny base image (bionic build image, distroless run image) with buildpacks for Golang"
 
-#[[order]]
-#group = [
-#  { id = "org.cloudfoundry.go-compiler" },
-#  { id = "org.cloudfoundry.go-mod" },
-#]
-#
-#[[order]]
-#group = [
-#  { id = "org.cloudfoundry.go-compiler" },
-#  { id = "org.cloudfoundry.dep" },
-#]
+[[order]]
+group = [
+  { id = "org.cloudfoundry.go-compiler" },
+  { id = "org.cloudfoundry.go-mod" },
+]
+
+[[order]]
+group = [
+  { id = "org.cloudfoundry.go-compiler" },
+  { id = "org.cloudfoundry.dep" },
+]
