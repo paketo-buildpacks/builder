@@ -1,4 +1,4 @@
-description = "Ubuntu bionic base image with buildpacks for Java, NodeJS and Golang"
+description = "Ubuntu bionic base image with buildpacks for Java, .NET, NodeJS and Golang"
 
 [[order]]
 group = [
@@ -38,7 +38,7 @@ group = [
 
 [[order]]
 group = [
-  { id = "org.cloudfoundry.dotnet-core-conf" },
+  { id = "org.cloudfoundry.dotnet-core" },
 ]
 
 [[order]]

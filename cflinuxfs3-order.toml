@@ -1,4 +1,4 @@
-description = "cflinuxfs3 base image with buildpacks for Java, NodeJS, Python, Golang, PHP, HTTPD and NGINX"
+description = "cflinuxfs3 base image with buildpacks for Java, .NET, NodeJS, Python, Golang, PHP, HTTPD and NGINX"
 
 [[order]]
 group = [
@@ -50,7 +50,7 @@ group = [
 
 [[order]]
 group = [
-  { id = "org.cloudfoundry.dotnet-core-conf" },
+  { id = "org.cloudfoundry.dotnet-core" },
 ]
 
 [[order]]
