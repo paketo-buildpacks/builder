@@ -38,7 +38,7 @@ group = [
 
 [[order]]
 group = [
-  { id = "org.cloudfoundry.python" },
+  { id = "org.cloudfoundry.python-runtime" },
   { id = "org.cloudfoundry.pipenv", optional = true },
   { id = "org.cloudfoundry.pip" },
 ]
