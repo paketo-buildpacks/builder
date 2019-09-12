@@ -26,14 +26,7 @@ group = [
 
 [[order]]
 group = [
-  { id = "org.cloudfoundry.node-engine" },
-  { id = "org.cloudfoundry.yarn" },
-]
-
-[[order]]
-group = [
-  { id = "org.cloudfoundry.node-engine" },
-  { id = "org.cloudfoundry.npm" },
+  { id = "org.cloudfoundry.nodejs" },
 ]
 
 [[order]]
@@ -65,21 +58,6 @@ group = [
   { id = "org.cloudfoundry.dep" },
 ]
 
-[[order]]
-group = [
-  { id = "org.cloudfoundry.php-dist" },
-  { id = "org.cloudfoundry.php-composer", optional = true },
-  { id = "org.cloudfoundry.httpd",        optional = true },
-  { id = "org.cloudfoundry.php-web" },
-]
-
-[[order]]
-group = [
-  { id = "org.cloudfoundry.php-dist" },
-  { id = "org.cloudfoundry.php-composer", optional = true },
-  { id = "org.cloudfoundry.nginx",        optional = true },
-  { id = "org.cloudfoundry.php-web" }
-]
 
 [[order]]
 group = [
