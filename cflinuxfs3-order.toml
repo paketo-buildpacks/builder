@@ -60,7 +60,7 @@ group = [
 
 [[order]]
 group = [
-  { id = "org.cloudfoundry.php-cnb" },
+  { id = "org.cloudfoundry.php" },
 ]
 
 [[order]]
