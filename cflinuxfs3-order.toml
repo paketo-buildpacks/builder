@@ -58,6 +58,10 @@ group = [
   { id = "org.cloudfoundry.dep" },
 ]
 
+[[order]]
+group = [
+  { id = "org.cloudfoundry.php-cnb" },
+]
 
 [[order]]
 group = [
