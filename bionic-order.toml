@@ -31,12 +31,5 @@ group = [
 
 [[order]]
 group = [
-  { id = "org.cloudfoundry.go-compiler" },
-  { id = "org.cloudfoundry.go-mod" },
-]
-
-[[order]]
-group = [
-  { id = "org.cloudfoundry.go-compiler"  },
-  { id = "org.cloudfoundry.dep" },
+  { id = "org.cloudfoundry.go" },
 ]

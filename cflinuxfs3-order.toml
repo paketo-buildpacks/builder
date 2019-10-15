@@ -31,31 +31,17 @@ group = [
 
 [[order]]
 group = [
-  { id = "org.cloudfoundry.python-runtime" },
-  { id = "org.cloudfoundry.pipenv", optional = true },
-  { id = "org.cloudfoundry.pip" },
+  { id = "org.cloudfoundry.python" },
 ]
 
 [[order]]
 group = [
-  { id = "org.cloudfoundry.conda" },
+  { id = "org.cloudfoundry.go" },
 ]
 
 [[order]]
 group = [
   { id = "org.cloudfoundry.dotnet-core" },
-]
-
-[[order]]
-group = [
-  { id = "org.cloudfoundry.go-compiler" },
-  { id = "org.cloudfoundry.go-mod" },
-]
-
-[[order]]
-group = [
-  { id = "org.cloudfoundry.go-compiler" },
-  { id = "org.cloudfoundry.dep" },
 ]
 
 [[order]]
