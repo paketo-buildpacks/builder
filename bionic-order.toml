@@ -4,7 +4,6 @@ description = "Ubuntu bionic base image with buildpacks for Java, NodeJS and Gol
 group = [
 
 ### Order is strictly enforced
-  { id = "org.cloudfoundry.archiveexpanding",          optional = true },
   { id = "org.cloudfoundry.openjdk" },
   { id = "org.cloudfoundry.buildsystem",               optional = true },
   { id = "org.cloudfoundry.jvmapplication" },
