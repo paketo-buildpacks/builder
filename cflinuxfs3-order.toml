@@ -6,9 +6,9 @@ group = [
 ### Order is strictly enforced
   { id = "org.cloudfoundry.openjdk" },
   { id = "org.cloudfoundry.buildsystem",               optional = true },
-  { id = "org.cloudfoundry.jvmapplication" },
 
 ### Order determines precedence
+  { id = "org.cloudfoundry.jvmapplication" },
   { id = "org.cloudfoundry.tomcat",                    optional = true },
   { id = "org.cloudfoundry.springboot",                optional = true },
   { id = "org.cloudfoundry.distzip",                   optional = true },
