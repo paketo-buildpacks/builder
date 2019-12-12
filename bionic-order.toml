@@ -32,3 +32,8 @@ group = [
 group = [
   { id = "org.cloudfoundry.go" },
 ]
+
+[[order]]
+group = [
+  { id = "org.cloudfoundry.dotnet-core" },
+]
