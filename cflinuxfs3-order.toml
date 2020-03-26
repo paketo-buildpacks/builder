@@ -57,3 +57,8 @@ group = [
 group = [
   { id = "org.cloudfoundry.nginx" },
 ]
+
+[[order]]
+group = [
+  { id = "org.cloudfoundry.procfile" },
+]
