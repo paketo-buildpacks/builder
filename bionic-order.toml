@@ -37,3 +37,8 @@ group = [
 group = [
   { id = "org.cloudfoundry.dotnet-core" },
 ]
+
+[[order]]
+group = [
+  { id = "org.cloudfoundry.procfile" },
+]
