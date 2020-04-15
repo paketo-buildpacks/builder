@@ -4,23 +4,23 @@ description = "cflinuxfs3 base image with buildpacks for Java, .NET, NodeJS, Gol
 group = [
 
 ### Order is strictly enforced
-  { id = "org.cloudfoundry.openjdk" },
-  { id = "org.cloudfoundry.buildsystem",               optional = true },
+  { id = "paketo-buildpacks/bellsoft-liberica",          optional = true },
+  { id = "paketo-buildpacks/build-system",               optional = true },
 
 ### Order determines precedence
-  { id = "org.cloudfoundry.jvmapplication" },
-  { id = "org.cloudfoundry.tomcat",                    optional = true },
-  { id = "org.cloudfoundry.springboot",                optional = true },
-  { id = "org.cloudfoundry.distzip",                   optional = true },
-  { id = "org.cloudfoundry.procfile",                  optional = true },
+  { id = "paketo-buildpacks/executable-jar",             optional = true },
+  { id = "paketo-buildpacks/apache-tomcat",              optional = true },
+  { id = "paketo-buildpacks/spring-boot",                optional = true },
+  { id = "paketo-buildpacks/dist-zip",                   optional = true },
+  { id = "paketo-buildpacks/procfile",                   optional = true },
 
 ### Order does not matter
-  { id = "org.cloudfoundry.azureapplicationinsights",  optional = true },
-  { id = "org.cloudfoundry.debug",                     optional = true },
-  { id = "org.cloudfoundry.googlestackdriver",         optional = true },
-  { id = "org.cloudfoundry.jdbc",                      optional = true },
-  { id = "org.cloudfoundry.jmx",                       optional = true },
-  { id = "org.cloudfoundry.springautoreconfiguration", optional = true },
+  { id = "paketo-buildpacks/azure-application-insights", optional = true },
+  { id = "paketo-buildpacks/debug",                      optional = true },
+  { id = "paketo-buildpacks/jmx",                        optional = true },
+
+### Order is strictly enforced
+  { id = "paketo-buildpacks/encrypt-at-rest",            optional = true },
 ]
 
 [[order]]
