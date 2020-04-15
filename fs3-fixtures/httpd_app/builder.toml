@@ -1,10 +1,10 @@
 [[Buildpacks]]
-  ID = "org.cloudfoundry.httpd"
+  ID = "paketo-buildpacks/httpd"
   URI = "/tmp/httpd-cnb_a034e0c86277d15d8c4cb550"
 
 [[Groups]]
 
   [[Groups.Buildpacks]]
-    id = "org.cloudfoundry.httpd"
+    id = "paketo-buildpacks/httpd"
     name = ""
     version = "0.0.1"

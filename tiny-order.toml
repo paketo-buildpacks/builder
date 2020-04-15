@@ -2,6 +2,6 @@ description = "Tiny base image (bionic build image, distroless run image) with b
 
 [[order]]
 group = [
-  { id = "org.cloudfoundry.go" },
+  { id = "paketo-buildpacks/go" },
 ]
 

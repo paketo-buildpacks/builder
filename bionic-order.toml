@@ -25,20 +25,20 @@ group = [
 
 [[order]]
 group = [
-  { id = "org.cloudfoundry.nodejs" },
+  { id = "paketo-buildpacks/nodejs" },
 ]
 
 [[order]]
 group = [
-  { id = "org.cloudfoundry.go" },
+  { id = "paketo-buildpacks/go" },
 ]
 
 [[order]]
 group = [
-  { id = "org.cloudfoundry.dotnet-core" },
+  { id = "paketo-buildpacks/dotnet-core" },
 ]
 
 [[order]]
 group = [
-  { id = "org.cloudfoundry.procfile" },
+  { id = "paketo-buildpacks/procfile" },
 ]
