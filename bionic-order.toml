@@ -5,12 +5,13 @@ group = [
 
 ### Order is strictly enforced
   { id = "paketo-buildpacks/bellsoft-liberica",          optional = true },
-  { id = "paketo-buildpacks/build-system",               optional = true },
+  { id = "paketo-buildpacks/gradle",                     optional = true },
+  { id = "paketo-buildpacks/maven",                      optional = true },
+  { id = "paketo-buildpacks/sbt",                        optional = true },
 
 ### Order determines precedence
   { id = "paketo-buildpacks/executable-jar",             optional = true },
   { id = "paketo-buildpacks/apache-tomcat",              optional = true },
-  { id = "paketo-buildpacks/spring-boot",                optional = true },
   { id = "paketo-buildpacks/dist-zip",                   optional = true },
   { id = "paketo-buildpacks/procfile",                   optional = true },
 
@@ -18,6 +19,7 @@ group = [
   { id = "paketo-buildpacks/azure-application-insights", optional = true },
   { id = "paketo-buildpacks/debug",                      optional = true },
   { id = "paketo-buildpacks/jmx",                        optional = true },
+  { id = "paketo-buildpacks/spring-boot",                optional = true },
 
 ### Order is strictly enforced
   { id = "paketo-buildpacks/encrypt-at-rest",            optional = true },
