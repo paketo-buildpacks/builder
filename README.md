@@ -4,9 +4,8 @@
 
 The following builders are supported:  
 **Tiny**: `gcr.io/paketo-buildpacks/builder:tiny`  
-**Bionic**: `gcr.io/paketo-buildpacks/builder:bionic`  
-**CFLinuxfs3**: `gcr.io/paketo-buildpacks/builder:cflinuxfs3`  
-
+**Base**: `gcr.io/paketo-buildpacks/builder:base`  
+**Full**: `gcr.io/paketo-buildpacks/builder:full-cf`  
 
 ### Using a builder for a specific Platform API version
 We maintain Paketo builders for the latest, n-1, and n-2 Platform API versions. 
