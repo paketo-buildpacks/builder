@@ -21,6 +21,7 @@ group = [
 
 ### Order is strictly enforced
   { id = "paketo-buildpacks/encrypt-at-rest",            optional = true },
+  { id = "paketo-buildpacks/image-labels",               optional = true },
 ]
 
 [[order]]
