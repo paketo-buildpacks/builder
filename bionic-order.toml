@@ -2,25 +2,7 @@ description = "Ubuntu bionic base image with buildpacks for Java, NodeJS and Gol
 
 [[order]]
 group = [
-
-### Order is strictly enforced
-  { id = "paketo-buildpacks/bellsoft-liberica",          optional = true },
-  { id = "paketo-buildpacks/build-system",               optional = true },
-
-### Order determines precedence
-  { id = "paketo-buildpacks/executable-jar",             optional = true },
-  { id = "paketo-buildpacks/apache-tomcat",              optional = true },
-  { id = "paketo-buildpacks/spring-boot",                optional = true },
-  { id = "paketo-buildpacks/dist-zip",                   optional = true },
-  { id = "paketo-buildpacks/procfile",                   optional = true },
-
-### Order does not matter
-  { id = "paketo-buildpacks/azure-application-insights", optional = true },
-  { id = "paketo-buildpacks/debug",                      optional = true },
-  { id = "paketo-buildpacks/jmx",                        optional = true },
-
-### Order is strictly enforced
-  { id = "paketo-buildpacks/encrypt-at-rest",            optional = true },
+  { id = "paketo-buildpacks/java" },
 ]
 
 [[order]]
