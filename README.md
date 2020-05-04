@@ -19,5 +19,5 @@ These are published to the following paths:
 ### Using specific versions of a builder
 Paketo builders are published with a version tag. Each builder also has a tag with both the builder and Platform API versions.
 
-**\<Version\>**: `gcr.io/paketo-buildpacks/builder:<Version>-<BUILDER>`
+**\<Version\>**: `gcr.io/paketo-buildpacks/builder:<Version>-<BUILDER>`  
 **\<Version\> with \<API Version\>**: `gcr.io/paketo-buildpacks/builder:<Version>-<BUILDER>-platform-api-<API Version>`
