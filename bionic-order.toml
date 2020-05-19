@@ -27,5 +27,10 @@ group = [
 
 [[order]]
 group = [
+  { id = "paketo-buildpacks/nginx" },
+]
+
+[[order]]
+group = [
   { id = "paketo-buildpacks/procfile" },
 ]
