@@ -22,11 +22,6 @@ group = [
 
 [[order]]
 group = [
-  { id = "paketo-buildpacks/httpd" },
-]
-
-[[order]]
-group = [
   { id = "paketo-buildpacks/nginx" },
 ]
 
