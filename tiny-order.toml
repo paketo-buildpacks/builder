@@ -1,7 +1,0 @@
-description = "Tiny base image (bionic build image, distroless run image) with buildpacks for Golang"
-
-[[order]]
-group = [
-  { id = "paketo-buildpacks/go" },
-]
-
