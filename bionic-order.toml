@@ -12,11 +12,6 @@ group = [
 
 [[order]]
 group = [
-  { id = "paketo-community/python" },
-]
-
-[[order]]
-group = [
   { id = "paketo-buildpacks/go" },
 ]
 
