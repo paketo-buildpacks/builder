@@ -2,6 +2,10 @@ description = "Tiny base image (bionic build image, distroless run image) with b
 
 [[order]]
 group = [
-  { id = "paketo-buildpacks/go" },
+  { id = "paketo-buildpacks/java-native-image" },
 ]
 
+[[order]]
+group = [
+  { id = "paketo-buildpacks/go" },
+]
