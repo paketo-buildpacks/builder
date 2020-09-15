@@ -44,7 +44,9 @@ In order to publish:
 
 The chron schedule is the best way to keep the `builder.toml` up to date in a
 community friendly way because it is transparent and requires no work of the
-buildpack maintainers. The other implementation options were:
+buildpack maintainers.
+
+## Alternative Implementations
 
 1. Use a Concourse pipeline to check for new buildpack versions and send
    dispatches to the builder repos to create PRs.
