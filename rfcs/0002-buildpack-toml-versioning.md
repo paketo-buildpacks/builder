@@ -27,6 +27,7 @@ builder, you could simply check the repo out the the correct tag.
 The proposed solution for updating the `builder.toml` is the following:
 * On some chron schedule, run a Github Action to grab the latest tag of each
   buildpack that is a part of the builder
+  * Also grab the latest version of the lifecycle and builder image.
 * Create a temporary `builder.toml` file with those versions.
 * Check if there is a diff between the new temporary `builder.toml` and the one
   that is already checked into the repo.
