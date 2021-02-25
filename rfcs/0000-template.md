@@ -16,7 +16,7 @@
 
 {{Any source material used in the creation of the RFC should be put here.}}
 
-## Unresolved Questions and ikeshedding (Optional)
+## Unresolved Questions and Bikeshedding (Optional)
 
 {{Write about any arbitrary decisions that need to be made (syntax, colors, formatting, minor UX decisions), and any questions for the proposal that have not been answered.}}
 
